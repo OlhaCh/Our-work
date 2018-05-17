@@ -16,27 +16,63 @@ namespace WpfApp1
         }
         public string Positive(string a,string b)
         {
-            int A = Int32.Parse(a);
-            int B = Int32.Parse(b);
-            return (A + B).ToString();
+            try
+            {
+                int A = Int32.Parse(a);
+                int B = Int32.Parse(b);
+
+                return (A + B).ToString();
+            }
+            catch (Exception e)
+            {              
+            }
+            return "ERROR";
+
         }
         public string Negative(string a, string b)
         {
-            int A = Int32.Parse(a);
-            int B = Int32.Parse(b);
-            return (A-B).ToString();
+            try
+            {
+                int A = Int32.Parse(a);
+                int B = Int32.Parse(b);
+                return (A - B).ToString();
+            }
+            catch (Exception e)
+            {
+            }
+            return "ERROR";
         }
         public string Multiply(string a, string b)
-        {
-            int A = Int32.Parse(a);
-            int B = Int32.Parse(b);
-            return (A * B).ToString();
+        {  try
+            {
+                int A = Int32.Parse(a);
+                int B = Int32.Parse(b);
+                return (A * B).ToString();
+            }
+            catch (Exception e)
+            {
+            }
+            return "ERROR";
         }
         public string Division(string a, string b)
         {
-            int A = Int32.Parse(a);
-            int B = Int32.Parse(b);
-            return (A / B).ToString();
+            try
+            {
+                int A = Int32.Parse(a);
+                int B = Int32.Parse(b);
+                if (B != 0)
+                {
+                    return (A / B).ToString();
+                }
+                else
+                {
+                    return "divide by zero";
+                }
+            }
+            catch (Exception e)
+            {
+            }
+            return "ERROR";
         }
     }
 }
