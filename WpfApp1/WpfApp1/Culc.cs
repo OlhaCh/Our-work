@@ -10,7 +10,10 @@ namespace WpfApp1
     {
         public string a { get; set; }
         public string b { get; set; }
+        public Culc()
+        {
 
+        }
         public string Positive(string a,string b)
         {
             int A = Int32.Parse(a);
